@@ -1,0 +1,24 @@
+{
+    "name": "blankes6project",
+    "version": "1.0.0",
+    "author": "Adam Fentosi",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "parcel -p 3000 src/index.html",
+        "build": "parcel build src/index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fentosi/blank-es6-project.git"
+    },
+    "devDependencies": {
+        "autoprefixer": "^9.4.9",
+        "node-sass": "^4.11.0",
+        "parcel-bundler": "^1.11.0",
+        "postcss-modules": "^1.4.1"
+    },
+    "dependencies": {
+        "normalize-scss": "^7.0.1"
+    }
+}
