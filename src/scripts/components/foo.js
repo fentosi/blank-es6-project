@@ -1,4 +1,4 @@
-export class Foo {
+export default class Foo {
     constructor(util) {
         this.util = util;
     }
