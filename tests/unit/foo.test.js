@@ -1,4 +1,4 @@
-import { Foo } from '../../src/scripts/components/foo';
+import Foo from '../../src/scripts/components/foo';
 import mockUtil, {mockTrim} from '../../src/scripts/utils/util';
 
 jest.mock('../../src/scripts/utils/util');
