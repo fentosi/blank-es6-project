@@ -1,4 +1,4 @@
-export class Util {
+export default class Util {
     static trim(value) {
         return Util.toStr(value).trim();
     }    
