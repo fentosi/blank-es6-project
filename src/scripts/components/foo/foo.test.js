@@ -1,7 +1,6 @@
-import Foo from '../../src/scripts/components/foo';
-import mockUtil, {mockTrim} from '../../src/scripts/utils/util';
-
-jest.mock('../../src/scripts/utils/util');
+const Foo = require("./foo");
+const mockUtil = require("../../utils/util");
+jest.mock('../../utils/util');
 
 const fooInstance = new Foo(mockUtil);
 
@@ -9,9 +8,9 @@ describe('Foo class', () => {
 
     beforeEach(() => {
         mockUtil.mockClear();
-        mockUtil.trim = mockTrim;
+        mockUtil.trim = jest.fn(value => value);
     })
-    
+
     test('given text then calling trimValue returns valid value', () => {
         const text = "some text";
 
@@ -25,7 +24,7 @@ describe('Foo class', () => {
 
         fooInstance.trimValue(text);
 
-        expect(mockTrim).toHaveBeenCalled();
+        expect(mockUtil.trim).toHaveBeenCalled();
     });
 
     test('given text then calling trimValue calls util.trim with correct value', () => {
@@ -33,6 +32,6 @@ describe('Foo class', () => {
 
         fooInstance.trimValue(text);
 
-        expect(mockTrim).toHaveBeenCalledWith(text);
+        expect(mockUtil.trim).toHaveBeenCalledWith(text);
     });
 });

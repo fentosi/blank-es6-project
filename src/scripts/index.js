@@ -1,6 +1,6 @@
-import Util from './utils/util';
-import Foo from './components/foo';
-import Bar from './components/bar';
+const Util = require('./utils/util');
+const Foo = require("./components/foo/foo");
+const Bar = require("./components/bar/bar");
 
 const fooInstance = new Foo(Util);
 const barInstance = new Bar(Util);

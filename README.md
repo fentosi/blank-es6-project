@@ -4,7 +4,10 @@ This is a blank project that you can use to start a web project.
 Modify the `package.json` to match your project needs.
 
 ### Install dependencies
-`npm install`
+```
+nvm use
+npm i
+```
 
 ### Run development mode
 `npm start`

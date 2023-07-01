@@ -1,7 +1,6 @@
-import Bar from '../../src/scripts/components/bar';
-import mockUtil, {mockTrim} from '../../src/scripts/utils/util';
-
-jest.mock('../../src/scripts/utils/util');
+const Bar = require("./bar");
+const mockUtil = require("../../utils/util");
+jest.mock('../../utils/util');
 
 const barInstance = new Bar(mockUtil);
 
@@ -9,9 +8,9 @@ describe('Bar class', () => {
 
     beforeEach(() => {
         mockUtil.mockClear();
-        mockUtil.trim = mockTrim;
+        mockUtil.trim = jest.fn(value => value);
     })
-    
+
     test('given text then calling logValue calls console.log with correct value', () => {
         const text = "some text";
 

@@ -1,6 +1,6 @@
-import Foo from './foo';
+const Foo = require("../foo/foo");
 
-export default class Bar extends Foo {
+module.exports =  class Bar extends Foo {
     constructor(util) {
         super(util);
     }
